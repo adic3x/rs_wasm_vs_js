@@ -11,6 +11,13 @@ function cycle(data, a) {
     return false;
 }
 
+function of(data, a) {
+    for (const i of data) {
+        if (i >= a) return true;
+    }
+    return false;
+}
+
 function iter(data, a) {
     return data.some(v => v >= a);
 }
@@ -18,6 +25,7 @@ function iter(data, a) {
 console.log(
     (
         cycle(A, 400) &&
+        of(A, 400) &&
         iter(A, 400) &&
         wasm.cycle(A, 400) &&
         wasm.iter(A, 400) &&
@@ -43,6 +51,11 @@ start = performance.now();
 for (let i = 0; i < I; i++) cycle(A, 400);
 end = performance.now();
 console.log(`js cycle ${(end - start).toFixed(2)} ms`);
+
+start = performance.now();
+for (let i = 0; i < I; i++) of(A, 400);
+end = performance.now();
+console.log(`js of ${(end - start).toFixed(2)} ms`);
 
 start = performance.now();
 for (let i = 0; i < I; i++) iter(A, 400);
