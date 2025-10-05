@@ -38,6 +38,7 @@ console.log(
 
 for (let i = 0; i < 1000; i++) {
     cycle(A, 400);
+    of(A, 400);
     iter(A, 400);
     wasm.cycle(A, 400);
     wasm.iter(A, 400);
