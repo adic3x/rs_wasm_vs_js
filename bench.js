@@ -51,24 +51,24 @@ let start, end;
 start = performance.now();
 for (let i = 0; i < I; i++) cycle(A, 400);
 end = performance.now();
-console.log(`js cycle ${(end - start).toFixed(2)} ms`);
+console.log(`js cycle ${((end - start) / I).toFixed(2)} ms`);
 
 start = performance.now();
 for (let i = 0; i < I; i++) of(A, 400);
 end = performance.now();
-console.log(`js of ${(end - start).toFixed(2)} ms`);
+console.log(`js of ${((end - start) / I).toFixed(2)} ms`);
 
 start = performance.now();
 for (let i = 0; i < I; i++) iter(A, 400);
 end = performance.now();
-console.log(`js iter ${(end - start).toFixed(2)} ms`);
+console.log(`js iter ${((end - start) / I).toFixed(2)} ms`);
 
 start = performance.now();
 for (let i = 0; i < I; i++) wasm.cycle(A, 400);
 end = performance.now();
-console.log(`rs cycle ${(end - start).toFixed(2)} ms`);
+console.log(`rs cycle ${((end - start) / I).toFixed(2)} ms`);
 
 start = performance.now();
 for (let i = 0; i < I; i++) wasm.iter(A, 400);
 end = performance.now();
-console.log(`rs iter ${(end - start).toFixed(2)} ms`);
+console.log(`rs iter ${((end - start) / I).toFixed(2)} ms`);
