@@ -6,7 +6,7 @@ testing: ok
 warnup: done
 
 js cycle 1510.74 ms
-js of 4443.29 ms
+js of 3448.77 ms
 js iter 4785.04 ms
 
 rs cycle 737.80 ms
