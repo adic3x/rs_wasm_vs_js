@@ -9,6 +9,10 @@ js cycle 1.47 ms
 js of 3.44 ms
 js iter 4.73 ms
 
+js non-typed cycle 0.45 ms
+js non-typed of 0.55 ms
+js non-typed iter 4.56 ms
+
 rs cycle 0.72 ms
 rs iter 0.71 ms
 ```
